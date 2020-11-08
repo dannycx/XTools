@@ -13,3 +13,8 @@ XSoftKeyUtil.startSoftKeyListener(this, object : XSoftKeyChangedCallback {
       }
 })
 ```
+
+##退出应用
+```java
+XSystemUtil.getInstance().doubleExit(this)
+```
