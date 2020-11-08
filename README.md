@@ -15,6 +15,6 @@ XSoftKeyUtil.startSoftKeyListener(this, object : XSoftKeyChangedCallback {
 ```
 
 ##退出应用
-```java
+```kotlin
 XSystemUtil.getInstance().doubleExit(this)
 ```
