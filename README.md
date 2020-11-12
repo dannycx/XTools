@@ -20,9 +20,9 @@ XSystemUtil.getInstance().doubleExit(this)
 ```
 
 ## root手机删除系统应用
-> adb root              进入root
+> + adb root              进入root
 
-> adb remount
+> + adb remount
 
 > adb shell
 
