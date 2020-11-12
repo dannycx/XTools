@@ -1,5 +1,5 @@
 # XTools
-[常见问题]()
+[常见问题](https://github.com/dannycx/XTools/blob/main/QUESTION.md)
 
 ## 键盘监听
 ```kotlin
