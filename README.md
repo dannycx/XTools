@@ -32,13 +32,13 @@ XSystemUtil.getInstance().doubleExit(this)
 > 目录
 > + ls
 
-> 系统应用
+> 查看系统应用目录
 > + cd system/app/
 
 > 上层目录
 > + cd ..
 
-> 系统内置应用
+> 查看系统内置应用目录
 > + cd priv-app/
 
 > apk目录
@@ -54,4 +54,9 @@ XSystemUtil.getInstance().doubleExit(this)
 > + adb reboot
 
 ## git常用命令
-
+> git提交命令
+* git pull
+* git status
+* git add .
+* git commit -m ""
+* git push
