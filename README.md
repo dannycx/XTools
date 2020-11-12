@@ -21,37 +21,37 @@ XSystemUtil.getInstance().doubleExit(this)
 
 ## root手机删除系统应用
 > 进入root
-> + adb root              
++ adb root              
 
 > 装载
-> + adb remount
++ adb remount
 
 > shell命令
-> + adb shell
++ adb shell
 
 > 目录
-> + ls
++ ls
 
 > 查看系统应用目录
-> + cd system/app/
++ cd system/app/
 
 > 上层目录
-> + cd ..
++ cd ..
 
 > 查看系统内置应用目录
-> + cd priv-app/
++ cd priv-app/
 
 > apk目录
-> + adb shell pm path package
++ adb shell pm path package
 
 > 进入apk目录
-> + cd path
++ cd path
 
 > 删除apk
-> + rm xx.apk
++ rm xx.apk
 
 > 重启
-> + adb reboot
++ adb reboot
 
 ## git常用命令
 > git提交命令
@@ -60,3 +60,8 @@ XSystemUtil.getInstance().doubleExit(this)
 * git add .
 * git commit -m ""
 * git push
+> git合并冲突
+- git merge --abort
+- git reset --merge
+
+
