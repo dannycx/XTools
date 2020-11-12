@@ -6,7 +6,7 @@
 * 24.+ 清单文件application配置resizeableActivity="false"
 * 24- 禁用横竖屏
 * 多窗口最终停留在onPause()
-3.EditView
+3. EditView
 - 隐藏键盘showSoftInputOnFocus=false
 - 不允许复制longClickable="false"  imeOptions="flagNoExtractUi"
 - 一劳永逸禁止复制customSelectionActionModeCallback->return false
