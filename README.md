@@ -1,6 +1,6 @@
 # XTools
 
-##键盘监听
+## 键盘监听
 ```kotlin
 val context = this
 XSoftKeyUtil.startSoftKeyListener(this, object : XSoftKeyChangedCallback {
@@ -14,7 +14,24 @@ XSoftKeyUtil.startSoftKeyListener(this, object : XSoftKeyChangedCallback {
 })
 ```
 
-##退出应用
+## 退出应用
 ```kotlin
 XSystemUtil.getInstance().doubleExit(this)
 ```
+
+## root手机删除系统应用
+> adb root
+> adb remount
+> adb shell
+> ls
+> cd system/app/
+> cd ..
+> ls
+> cd priv-app/
+> cd ..
+> adb shell pm path package
+> cd path
+> rm xx.apk
+
+## git常用命令
+
