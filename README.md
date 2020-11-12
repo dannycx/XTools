@@ -63,5 +63,11 @@ XSystemUtil.getInstance().doubleExit(this)
 > git合并冲突
 - git merge --abort
 - git reset --merge
+> 其他
+* git remote update origin --p
 
+## gradle命令
+* gradlew build --refresh dependencies
+* gradlew :app:denpendencies
+* =file:///d:/gradle-5.4.1.zip
 
