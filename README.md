@@ -20,29 +20,38 @@ XSystemUtil.getInstance().doubleExit(this)
 ```
 
 ## root手机删除系统应用
-> + adb root              进入root
+> 进入root
+> + adb root              
 
+> 装载
 > + adb remount
 
-> adb shell
+> shell命令
+> + adb shell
 
-> ls
+> 目录
+> + ls
 
-> cd system/app/
+> 系统应用
+> + cd system/app/
 
-> cd ..
+> 上层目录
+> + cd ..
 
-> ls
+> 系统内置应用
+> + cd priv-app/
 
-> cd priv-app/
+> apk目录
+> + adb shell pm path package
 
-> cd ..
+> 进入apk目录
+> + cd path
 
-> adb shell pm path package
+> 删除apk
+> + rm xx.apk
 
-> cd path
-
-> rm xx.apk
+> 重启
+> + adb reboot
 
 ## git常用命令
 
