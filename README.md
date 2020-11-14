@@ -30,14 +30,8 @@ XSystemUtil.getInstance().doubleExit(this)
 > shell命令
 + adb shell
 
-> 目录
-+ ls
-
 > 查看系统应用目录
 + cd system/app/
-
-> 上层目录
-+ cd ..
 
 > 查看系统内置应用目录
 + cd priv-app/
@@ -46,7 +40,7 @@ XSystemUtil.getInstance().doubleExit(this)
 + adb shell pm path package
 
 > 进入apk目录
-+ cd path
++ cd system/priv-app/XXX/
 
 > 删除apk
 + rm xx.apk
