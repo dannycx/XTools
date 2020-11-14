@@ -1,10 +1,17 @@
 package com.danny.xtools
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.danny.xtools.bean.TestBean
 import com.danny.xtools.util.XClone
+import com.danny.xtools.util.XSystemUtil
 
+/**
+ * 测试页面
+ *
+ * @author danny
+ * @since 2020-11-08
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,4 +38,9 @@ class MainActivity : AppCompatActivity() {
         b.name = "wangwu"
         return b
     }
+
+    override fun onBackPressed() {
+        XSystemUtil.getInstance().doubleExit(this)
+    }
+
 }

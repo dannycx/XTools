@@ -1,6 +1,6 @@
 package com.danny.xtools.util;
 
-import android.content.Context;
+import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -32,8 +32,9 @@ public class XSystemUtil {
      *
      * @param context 上下文
      */
-    public void doubleExit(Context context) {
+    public void doubleExit(Activity context) {
         if (System.currentTimeMillis() - startTime < 1000) {// 双击
+            context.finish();
             Process.killProcess(0);
             System.exit(0);
         }else {
@@ -73,5 +74,4 @@ public class XSystemUtil {
         }
         drawable.setCallback(null);
     }
-
 }
