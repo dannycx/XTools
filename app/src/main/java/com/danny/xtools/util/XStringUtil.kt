@@ -76,5 +76,5 @@ object XStringUtil {
 
     fun isEmpty(args: Array<Any>?): Boolean = (null == args || args.isEmpty())
 
-    fun isEmpty(str: String?): Boolean = (null == str || str.isEmpty() || "null" == str)
+    fun isBlank(str: String?): Boolean = (null == str || str.isEmpty() || "null" == str)
 }
