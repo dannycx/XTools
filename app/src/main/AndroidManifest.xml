@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- IPC简单消息传递 -->
+        <service android:name=".ipc.XMessengerService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.danny.messenger"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

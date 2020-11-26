@@ -3,6 +3,10 @@ plugins {
     id 'kotlin-android'
 }
 
+def resDirs = [
+        'ipc'
+]
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -29,6 +33,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            resDirs.forEach {
+                res.srcDirs += 'src/main/java/com/danny/xtools/' + it + '/res'
+            }
+        }
     }
 }
 
