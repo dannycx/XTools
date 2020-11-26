@@ -1,11 +1,11 @@
 # 进程间通信IPC
 
-## Messenger简单的进程间消息传递
-> Messenger基于AIDL实现
-> Messenger采用Handler + Message实现进程间简单的消息传递
-> 适合数据量少，数据小情况
-> 服务端创建Handler,客户端通过bind绑定服务,获取IBinder,创建Messenger通过send传递消息Message至服务端
-> Message消息中可加入客户端replyTo对象绑定客户端Handler与客户端通信
+1. Messenger简单的进程间消息传递
+* Messenger基于AIDL实现
+* Messenger采用Handler + Message实现进程间简单的消息传递
+* 适合数据量少，数据小情况
+* 服务端创建Handler,客户端通过bind绑定服务,获取IBinder,创建Messenger通过send传递消息Message至服务端
+* Message消息中可传入客户端replyTo对象绑定客户端Handler实现与客户端的通信
 
 ### Service端
 ```
@@ -133,3 +133,5 @@ class XMessengerClient: AppCompatActivity() {
     }
 }
 ```
+
+2. AIDL实现进程间通信
