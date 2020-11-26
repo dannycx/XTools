@@ -78,7 +78,7 @@ class XMessengerClient: AppCompatActivity() {
         override fun handleMessage(msg: Message) {
             when(msg.what) {
                 2 -> {
-                    Toast.makeText(this@XMessengerClient, "服务端发送消息", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@XMessengerClient, "服务端回复了消息", Toast.LENGTH_SHORT).show()
                 }
                 else -> super.handleMessage(msg)
             }

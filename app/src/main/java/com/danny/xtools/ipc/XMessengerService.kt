@@ -17,7 +17,7 @@ class XMessengerService: Service() {
         override fun handleMessage(msg: Message) {
             when(msg.what) {
                 1 -> {
-                    Toast.makeText(applicationContext, "", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "客户端发送了消息", Toast.LENGTH_SHORT).show()
                     val clientMessenger = msg.replyTo
                     val message = Message.obtain(null, 2)
                     try {
