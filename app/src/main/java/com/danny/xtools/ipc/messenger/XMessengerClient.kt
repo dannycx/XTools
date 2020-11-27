@@ -1,4 +1,4 @@
-package com.danny.xtools.ipc
+package com.danny.xtools.ipc.messenger
 
 import android.content.ComponentName
 import android.content.Context

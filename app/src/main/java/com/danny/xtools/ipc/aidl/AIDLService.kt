@@ -1,4 +1,4 @@
-package com.danny.xtools.aidl
+package com.danny.xtools.ipc.aidl
 
 import android.app.Service
 import android.content.Intent
@@ -16,18 +16,23 @@ class AIDLService: Service() {
         override fun lifeIn(life: Life?) {
             synchronized(AIDLService::class.java) {
                 life?.let {
+                    // 修改值,看客户端反馈
+                    life.name = "脚下的路"
                     lifes.add(life)
                 }
             }
         }
 
         override fun getLifes(): MutableList<Life> {
-            return lifes
+            synchronized(AIDLService::class.java) {
+                return lifes
+            }
         }
     }
 
     override fun onCreate() {
         super.onCreate()
+        // 添加一条默认数据
         val life = Life()
         life.name = "一切未可知"
         lifes.add(life)

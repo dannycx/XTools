@@ -1,5 +1,5 @@
 // BookManager.aidl
-package com.danny.xtools.aidl;
+package com.danny.xtools.ipc.aidl;
 
 import com.danny.xtools.aidl.Life;
 

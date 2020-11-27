@@ -1,4 +1,4 @@
-package com.danny.xtools.aidl;
+package com.danny.xtools.ipc.aidl;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -48,7 +48,7 @@ public class Life implements Parcelable {
         dest.writeString(name);
     }
 
-    public void readToParcel(Parcel parcel) {// out
+    public void readFromParcel(Parcel parcel) {// out
         name = parcel.readString();
     }
 }
