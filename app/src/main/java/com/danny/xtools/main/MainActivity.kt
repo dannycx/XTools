@@ -1,9 +1,15 @@
-package com.danny.xtools
+package com.danny.xtools.main
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.danny.xtools.R
 import com.danny.xtools.bean.TestBean
+import com.danny.xtools.databinding.ActivityMainBinding
+import com.danny.xtools.dialog.XTipsFragmentDialog
 import com.danny.xtools.util.XClone
+import com.danny.xtools.util.XFrameworkUtil
 import com.danny.xtools.util.XSystemUtil
 
 /**
@@ -13,11 +19,27 @@ import com.danny.xtools.util.XSystemUtil
  * @since 2020-11-08
  */
 class MainActivity : AppCompatActivity() {
+    private lateinit var mainBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        testClone();
+        testClone()
+        initListener()
+    }
+
+    private fun initListener() {
+        mainBinding.tips.setOnClickListener {
+            val tipsDialog = XTipsFragmentDialog()
+            tipsDialog.show(supportFragmentManager, "Tips")
+        }
+
+        XFrameworkUtil.getScreenType(this, object: XFrameworkUtil.ScreenTypeCallback {
+            override fun screenType(screenType: Int) {
+                Toast.makeText(this@MainActivity, "屏幕类型-$screenType", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun testClone() {

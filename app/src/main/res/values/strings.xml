@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">XTools</string>
+    <string name="dialog_tip">当前有最新版本，请前往下载</string>
 </resources>

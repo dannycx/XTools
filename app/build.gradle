@@ -4,7 +4,9 @@ plugins {
 }
 
 def resDirs = [
-        'ipc'
+        'main',
+        'ipc',
+        'dialog'
 ]
 
 android {

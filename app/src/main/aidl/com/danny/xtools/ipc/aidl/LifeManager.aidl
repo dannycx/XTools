@@ -1,7 +1,7 @@
 // BookManager.aidl
 package com.danny.xtools.ipc.aidl;
 
-import com.danny.xtools.aidl.Life;
+import com.danny.xtools.ipc.aidl.Life;
 
 interface LifeManager {
     List<Life> getLifes();
