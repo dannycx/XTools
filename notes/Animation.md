@@ -174,7 +174,7 @@ translate.setAnimationListener(new Animation.AnimationListener() {
 * ofObject初始化动画，必须调用setEvaluator显示设置估值器，因为系统根本是无法知道，你动画的中间值Object真正是什么类型的。
 
 ### ValueAnimator与ObjectAnimator流程
-![](https://github.com/dannycx/XTools/tree/master/shotscreen/value_object.png)
+![](https://github.com/dannycx/XTools/blob/main/shotscreen/value_object.png)
 
 ### ValueAnimator
 #### ValueAnimator对指定值区间做动画运算，我们通过对运算过程做监听来自己操作控件。
