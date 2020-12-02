@@ -3,6 +3,8 @@
 
 [IPC通信](https://github.com/dannycx/XTools/blob/main/notes/IPC.md)
 
+[动画](https://github.com/dannycx/XTools/blob/main/notes/Animation.md)
+
 ## 键盘监听
 ```kotlin
 val context = this
@@ -49,19 +51,6 @@ XSystemUtil.getInstance().doubleExit(this)
 
 > 重启
 + adb reboot
-
-## git常用命令
-> git提交命令
-* git pull
-* git status
-* git add .
-* git commit -m ""
-* git push
-> git合并冲突
-- git merge --abort
-- git reset --merge
-> 其他
-* git remote update origin --p
 
 ## gradle命令
 * gradlew build --refresh dependencies
