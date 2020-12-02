@@ -168,22 +168,16 @@ translate.setAnimationListener(new Animation.AnimationListener() {
 });
 ```
 
-####　自定义补间动画
-- 继承自Animation，重写ｉｎｉｔialize()和applyTransformation（）
-- ｉｎｉｔialize()初始化工作
-- applyTransformation（）矩阵变换工作（Camera简化矩阵变换过程）
-
-
 
 ## 属性动画
-###### API11出现，ValueAnimator, ObjectAnimator, AnimatorSet,效果是在一个时间间隔内完成对象从一个属性值到另一个属性值的改变。可使用nineoldandroids兼容之前版本
-###### ofObject初始化动画，必须调用setEvaluator显示设置估值器，因为系统根本是无法知道，你动画的中间值Object真正是什么类型的。
+* API11出现，ValueAnimator, ObjectAnimator, AnimatorSet,效果是在一个时间间隔内完成对象从一个属性值到另一个属性值的改变。可使用nineoldandroids兼容之前版本
+* ofObject初始化动画，必须调用setEvaluator显示设置估值器，因为系统根本是无法知道，你动画的中间值Object真正是什么类型的。
 
-#### ValueAnimator与ObjectAnimator流程
-![](https://github.com/dannycx/Demo/blob/master/shotscreen/value_object.png)
+### ValueAnimator与ObjectAnimator流程
+![](https://github.com/dannycx/XTools/blob/master/shotscreen/value_object.png)
 
-#### ValueAnimator
-###### ValueAnimator对指定值区间做动画运算，我们通过对运算过程做监听来自己操作控件。
+### ValueAnimator
+#### ValueAnimator对指定值区间做动画运算，我们通过对运算过程做监听来自己操作控件。
 - ValueAnimator只负责对指定的数字区间进行动画运算
 - 我们需要对运算过程进行监听，然后自己对控件做动画操作
 
