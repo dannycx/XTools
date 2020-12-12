@@ -23,4 +23,26 @@
     
     > 焦点丢失->设置setNextFocusId
 
+4.Error:java.lang.RuntimeException: Some file crunching failed, see logs for detail
+> 出现这个错误的原因是有哪种情况？
+1. 构建Gradle的时候，Gradle会去检查一下是否修改过文件的后缀名；
+2. 一般大多数是出现在图片上，.jpg修改成了.png就会出现这个问题；
+3. 9patch图片也可能出现这个问题。
+
+第一种解决办法是
+     查看上面的日志，我的原因是.9图片的问题,注意.9图片在androidStudio中有严格检查，可能你的这些图片不是.9格式的．解决办法就是把图片后缀改成.png，直接修改图片名称就可以改成png图片了。如果图片过多可能工作量有点大！
+
+第二种解决办法是
+    你的主工程配置文件中加入两行代码，意思是禁止gradle检查png的合法性.
+```
+aaptOptions.cruncherEnabled = false
+aaptOptions.useNewCruncher = false
+
+build.gradle
+aaptOptions {
+        cruncherEnabled = false
+		useNewCruncher = false
+    }
+```
+
 
