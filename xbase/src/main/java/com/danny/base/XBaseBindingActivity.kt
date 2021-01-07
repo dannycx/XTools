@@ -48,9 +48,4 @@ abstract class XBaseBindingActivity: FragmentActivity() {
      * 获取activity级别VM
      */
     fun <T : ViewModel> getActivityVM(clazz: Class<T>): T = activityVMProvider[clazz]
-
-    /**
-     * 获取application级别VM
-     */
-    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (application as com.danny.base.XBaseApplication).vMProvider[clazz]
 }

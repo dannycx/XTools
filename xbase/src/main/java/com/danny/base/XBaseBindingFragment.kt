@@ -75,10 +75,4 @@ abstract class XBaseBindingFragment: Fragment() {
      * 获取fragment级别VM
      */
     fun <T : ViewModel> getFragmentVM(clazz: Class<T>): T = fragmentVMProvider[clazz]
-
-
-    /**
-     * 获取fragment级别VM
-     */
-    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (thisActivity.application as com.danny.base.XBaseApplication).vMProvider[clazz]
 }
