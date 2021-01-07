@@ -17,11 +17,12 @@
 ## 运行flutter/flutter_console.bat
 - flutter doctor下载dart-sdk
 ## Android studio下载插件，版本要对应，否则会不兼容，不允许安装
-### as内安装
-### https://plugins.jetbrains.com 官网下载指定版本
+- as内安装
+- https://plugins.jetbrains.com 官网下载指定版本
+
 
 # 创建flutter应用
 ## as创建flutter项目选择sdk
 ## 编译问题
-### 配置代理
-### Pub get失败，删除flutter\bin\cache\lockfile文件
+- 配置代理
+- Pub get失败，删除flutter\bin\cache\lockfile文件
