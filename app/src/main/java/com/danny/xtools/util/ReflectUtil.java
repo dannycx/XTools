@@ -1,5 +1,9 @@
 package com.danny.xtools.util;
 
+import androidx.collection.SimpleArrayMap;
+
+import com.danny.xtools.util.data.XSP;
+
 import java.lang.reflect.Constructor;
 
 /**
@@ -9,6 +13,7 @@ import java.lang.reflect.Constructor;
  * @since 2020-11-27
  */
 public class ReflectUtil {
+    private static SimpleArrayMap<String, XSP> sam = new SimpleArrayMap<>();
 
 
     public static Object getReflectConstructor(Class clazz, Object innerClassInstance) {

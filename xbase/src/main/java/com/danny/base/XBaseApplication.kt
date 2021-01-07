@@ -1,4 +1,4 @@
-package com.danny.xtools.base
+package com.danny.base
 
 import android.app.Application
 import androidx.lifecycle.ViewModelProvider

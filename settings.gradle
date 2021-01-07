@@ -1,2 +1,5 @@
+include ':x'
+include ':xui'
+include ':xbase'
 include ':app'
 rootProject.name = "XTools"

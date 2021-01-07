@@ -1,10 +1,9 @@
-package com.danny.xtools.base
+package com.danny.base
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewOverlay
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
@@ -23,6 +22,7 @@ abstract class XBaseBindingAdapter<M, B: ViewDataBinding>(
 ): ListAdapter<M, RecyclerView.ViewHolder>(diffCallback) {
     var onClick: OnItemClick<M>? = null
     var onLongClick: OnItemLongClick<M>? = null
+    var onFocusListener: OnItemFocusListener? = null
 
     override fun submitList(list: MutableList<M>?) {
         super.submitList(list) {
@@ -55,6 +55,14 @@ abstract class XBaseBindingAdapter<M, B: ViewDataBinding>(
             }
             false
         }
+
+        holder.itemView.onFocusChangeListener = View.OnFocusChangeListener { view, onFocus ->
+            onFocusListener?.onItemCheckClick(
+                    view,
+                    onFocus,
+                    0
+            )
+        }
         return holder
     }
 
@@ -80,7 +88,7 @@ abstract class XBaseBindingAdapter<M, B: ViewDataBinding>(
         fun onItemLongClick(item: M, position: Int)
     }
 
-    interface OnItemCheckClick {
+    interface OnItemFocusListener {
         fun onItemCheckClick(v: View, focus: Boolean, position: Int)
     }
 }

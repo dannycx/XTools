@@ -1,10 +1,10 @@
-package com.x.xtools
+package com.danny
 
 import android.util.Log
 import java.text.SimpleDateFormat
 import java.util.*
 
-object XLogUtil {
+object XLog {
     private const val VERBOSE = 1
     private const val DEBUG = 2
     private const val INFO = 3

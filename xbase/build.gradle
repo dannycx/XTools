@@ -3,6 +3,10 @@ plugins {
     id 'kotlin-android'
 }
 
+def resDirs = [
+        ''
+]
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
@@ -23,12 +27,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main {
+            resDirs.forEach {
+                res.srcDirs += 'src/main/java/com/danny/xtools/' + it + '/res'
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -41,4 +59,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha05'
 }

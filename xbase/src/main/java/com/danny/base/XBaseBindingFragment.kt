@@ -1,4 +1,4 @@
-package com.danny.xtools.base
+package com.danny.base
 
 import android.content.Context
 import android.os.Bundle
@@ -80,5 +80,5 @@ abstract class XBaseBindingFragment: Fragment() {
     /**
      * 获取fragment级别VM
      */
-    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (thisActivity.application as XBaseApplication).vMProvider[clazz]
+    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (thisActivity.application as com.danny.base.XBaseApplication).vMProvider[clazz]
 }

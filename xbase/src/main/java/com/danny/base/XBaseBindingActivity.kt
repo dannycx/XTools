@@ -1,4 +1,4 @@
-package com.danny.xtools.base
+package com.danny.base
 
 import android.os.Bundle
 import android.util.SparseArray
@@ -52,5 +52,5 @@ abstract class XBaseBindingActivity: FragmentActivity() {
     /**
      * 获取application级别VM
      */
-    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (application as XBaseApplication).vMProvider[clazz]
+    fun <T : ViewModel> getApplicationVM(clazz: Class<T>): T = (application as com.danny.base.XBaseApplication).vMProvider[clazz]
 }

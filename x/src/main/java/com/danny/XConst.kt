@@ -1,4 +1,5 @@
 package com.danny
 
-object XCont {
+object XConst {
+    const val TAG = "X_Danny"
 }
