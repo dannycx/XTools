@@ -3,9 +3,17 @@
 
 [IPC通信](https://github.com/dannycx/XTools/blob/main/notes/IPC.md)
 
+[Flutter](https://github.com/dannycx/XTools/blob/main/notes/flutter/flutter.md)
+
+[Android四大组件](https://github.com/dannycx/XTools/blob/main/notes/android/component.md)
+
+[通信](https://github.com/dannycx/XTools/blob/main/notes/communication/communication.md)
+
 [动画](https://github.com/dannycx/XTools/blob/main/notes/Animation.md)
 
-[Flutter](https://github.com/dannycx/XTools/blob/main/notes/flutter/flutter.md)
+[设计模式](https://github.com/dannycx/XTools/blob/main/design/design.md)
+
+[应用框架](https://github.com/dannycx/XTools/blob/main/frame/frame.md)
 
 ## 键盘监听
 ```kotlin
