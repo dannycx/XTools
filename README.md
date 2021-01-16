@@ -5,7 +5,7 @@
 
 [Flutter](https://github.com/dannycx/XTools/blob/main/notes/flutter/flutter.md)
 
-[Android四大组件](https://github.com/dannycx/XTools/blob/main/notes/android/component.md)
+[Android四大组件](https://github.com/dannycx/XTools/blob/main/notes/component/component.md)
 
 [通信](https://github.com/dannycx/XTools/blob/main/notes/communication/communication.md)
 
