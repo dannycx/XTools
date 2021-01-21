@@ -2,4 +2,7 @@
 - onCreate() -> onStart() -> onResume() -> onPause() -> onStop() -> onDestroy()
 
 # 属性
-- onConfigure=""
+- 屏幕旋转不会重走各生命周期
+```
+android:configChanges="keyboardHidden|orientation|screenSize"
+```
