@@ -8,8 +8,12 @@ android:configChanges="keyboardHidden|orientation|screenSize"
 ```
 - 任务栈名称
 ```
-android:taskAffinity="" \n
+android:taskAffinity=""
 若application不配置该属性，默认为包名
+需配合singleTask或singleInstance使用才可以在新任务栈创建
+
+应用A-ActivityA与应用B-ActivityB有相同的taskAffinity，并且应用A-ActivityA配置android:allowTaskReparenting="true"
+若此时打开应用A-ActivityA，退出打开应用B-ActivityB，则当前显示页面为应用A-ActivityA，按返回则为应用B-ActivityB页面
 ```
 
 ## 启动模式
