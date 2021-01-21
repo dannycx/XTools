@@ -33,3 +33,5 @@ android:taskAffinity=""
 ```
 创建新任务栈，并将实例添加其中
 ```
+
+## Intent
