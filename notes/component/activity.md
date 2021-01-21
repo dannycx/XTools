@@ -6,6 +6,11 @@
 ```
 android:configChanges="keyboardHidden|orientation|screenSize"
 ```
+- 任务栈名称
+```
+android:taskAffinity="" \n
+若application不配置该属性，默认为包名
+```
 
 ## 启动模式
 - standard
