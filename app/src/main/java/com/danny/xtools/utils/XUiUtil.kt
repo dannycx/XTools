@@ -1,4 +1,4 @@
-package com.danny.xtools.util
+package com.danny.xtools.utils
 
 import android.app.Activity
 import android.app.ActivityManager
@@ -10,8 +10,6 @@ import android.util.TypedValue
 import android.view.View
 import android.view.ViewConfiguration
 import android.view.WindowManager
-import androidx.annotation.ColorInt
-import androidx.annotation.ColorRes
 import androidx.annotation.DimenRes
 import com.danny.xtools.R
 
@@ -29,12 +27,20 @@ object XUiUtil {
 
     /** 获取布局文件id  */
     fun getLayoutId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_LAYOUT)
+        return getResId(
+            context,
+            name,
+            RES_LAYOUT
+        )
     }
 
     /** 获取字符串资源id  */
     private fun getStringId(context: Context, name: String?): Int {
-        var strId = getResId(context, name, RES_STRING)
+        var strId = getResId(
+            context,
+            name,
+            RES_STRING
+        )
         if (strId < 0) {
             strId = R.string.app_name
         }
@@ -42,17 +48,30 @@ object XUiUtil {
     }
 
     fun getString(context: Context, name: String?): String {
-        return context.resources.getString(getStringId(context, name))
+        return context.resources.getString(
+            getStringId(
+                context,
+                name
+            )
+        )
     }
 
     /** 获取drawable资源id  */
     fun getDrawableId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_DRAWABLE)
+        return getResId(
+            context,
+            name,
+            RES_DRAWABLE
+        )
     }
 
     /** 获取mipmap资源id  */
     fun getMipmapId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_MIPMAP)
+        return getResId(
+            context,
+            name,
+            RES_MIPMAP
+        )
     }
 
     /** 获取mipmap/drawable/color资源id  */
@@ -74,32 +93,58 @@ object XUiUtil {
 
     /** 获取color资源id  */
     fun getColorId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_COLOR)
+        return getResId(
+            context,
+            name,
+            RES_COLOR
+        )
     }
 
     /** 获取dimen资源id  */
     fun getDimenId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_DIMEN)
+        return getResId(
+            context,
+            name,
+            RES_DIMEN
+        )
     }
 
     /** 获取style资源id  */
     fun getStyleId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_STYLE)
+        return getResId(
+            context,
+            name,
+            RES_STYLE
+        )
     }
 
     /** 获取attr资源id  */
     fun getAttrId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_ATTR)
+        return getResId(
+            context,
+            name,
+            RES_ATTR
+        )
     }
 
     /** 获取anim资源id  */
     fun getAnimId(context: Context, name: String?): Int {
-        return getResId(context, name, RES_ANIM)
+        return getResId(
+            context,
+            name,
+            RES_ANIM
+        )
     }
 
     /** 获取dimen资源id  */
     fun getDimensionPixelSize(context: Context, name: String?): Int {
-        return context.resources.getDimensionPixelSize(getResId(context, name, RES_DIMEN))
+        return context.resources.getDimensionPixelSize(
+            getResId(
+                context,
+                name,
+                RES_DIMEN
+            )
+        )
     }
 
     /** 获取dimen资源  */

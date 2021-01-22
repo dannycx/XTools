@@ -7,7 +7,7 @@ import android.util.DisplayMetrics
 import android.view.*
 import androidx.fragment.app.DialogFragment
 import com.danny.xtools.R
-import com.danny.xtools.util.XUiUtil
+import com.danny.xtools.utils.XUiUtil
 
 class XTipsFragmentDialog: DialogFragment() {
 

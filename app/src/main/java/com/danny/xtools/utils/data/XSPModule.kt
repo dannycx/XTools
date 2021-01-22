@@ -1,4 +1,4 @@
-package com.danny.xtools.util.data
+package com.danny.xtools.utils.data
 
 import android.content.SharedPreferences
 

@@ -1,4 +1,4 @@
-package com.danny.xtools.util
+package com.danny.xtools.utils
 
 import android.text.InputFilter
 import kotlin.experimental.and

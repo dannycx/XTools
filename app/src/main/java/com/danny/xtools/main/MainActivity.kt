@@ -8,9 +8,9 @@ import com.danny.xtools.R
 import com.danny.xtools.bean.TestBean
 import com.danny.xtools.databinding.ActivityMainBinding
 import com.danny.xtools.dialog.XTipsFragmentDialog
-import com.danny.xtools.util.XClone
-import com.danny.xtools.util.XFrameworkUtil
-import com.danny.xtools.util.XSystemUtil
+import com.danny.xtools.utils.XClone
+import com.danny.xtools.utils.XFrameworkUtil
+import com.danny.xtools.utils.XSystemUtil
 
 /**
  * 测试页面

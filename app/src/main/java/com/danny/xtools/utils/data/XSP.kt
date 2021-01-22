@@ -1,4 +1,4 @@
-package com.danny.xtools.util.data
+package com.danny.xtools.utils.data
 
 import android.content.Context
 import androidx.collection.SimpleArrayMap
@@ -24,7 +24,7 @@ class XSP(): XSPModule() {
         }
     }
 
-    constructor(spName: String) {
+    constructor(spName: String): this() {
         sp = X.getContext().getSharedPreferences(spName, Context.MODE_PRIVATE)
     }
 }

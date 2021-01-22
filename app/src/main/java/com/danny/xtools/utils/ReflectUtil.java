@@ -1,8 +1,8 @@
-package com.danny.xtools.util;
+package com.danny.xtools.utils;
 
 import androidx.collection.SimpleArrayMap;
 
-import com.danny.xtools.util.data.XSP;
+import com.danny.xtools.utils.data.XSP;
 
 import java.lang.reflect.Constructor;
 

@@ -1,4 +1,4 @@
-package com.danny.xtools.util;
+package com.danny.xtools.utils;
 
 import android.util.Log;
 

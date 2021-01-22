@@ -1,4 +1,4 @@
-package com.danny.xtools.util.data
+package com.danny.xtools.utils.data
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
