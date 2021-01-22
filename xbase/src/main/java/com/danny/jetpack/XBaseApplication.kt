@@ -1,4 +1,4 @@
-package com.danny.base
+package com.danny.jetpack
 
 import android.app.Application
 import androidx.lifecycle.ViewModelProvider
