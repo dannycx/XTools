@@ -15,6 +15,8 @@
 
 [应用框架](https://github.com/dannycx/XTools/blob/main/frame/frame.md)
 
+[issue](https://github.com/dannycx/XTools/blob/main/notes/issue.md)
+
 ## 键盘监听
 ```kotlin
 val context = this
