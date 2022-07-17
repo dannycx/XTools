@@ -1,6 +1,6 @@
-# 问题积累
+# 知识积累
 
-## 1.图片深色模式适配
+## 图片深色模式适配
 ### 填充模式
 * 内部填充src_in、src_atop
 * 方形 src-over
@@ -12,3 +12,6 @@
     <android:tintMode="src_in"/>
 </style>
 ```
+
+###### 当前activity
+* adb -d shell dumpsys activity activities | grep mResumedActivity
