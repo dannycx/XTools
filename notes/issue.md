@@ -15,3 +15,8 @@
 
 ### 当前activity
 * adb -d shell dumpsys activity activities | grep mResumedActivity
+
+### 资源冲突
+* AndroidManifest 冲突（tools:replace="android:name"）
+* 包冲突（exclude排除，使用统一依赖版本）
+* 资源名冲突（模块前缀命名）
