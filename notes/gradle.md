@@ -15,3 +15,10 @@ compile('xxx.xxx.xxx:xxx:1.1.1') {
     exclude group:'com.android.support', module:'support-v4'
 }
 ```
+
+### 提示命名机制（xml资源避免合并冲突）
+```
+android {
+    resourcePrefix "组件名_"
+}
+```
