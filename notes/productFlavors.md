@@ -1,4 +1,6 @@
 # 多渠道打包
+* 编译优先级 BuildType > productFlavor > Main > dependencies
+
 ## 示例
 ```
 productFlavors {
@@ -12,6 +14,7 @@ productFlavors {
             verNum:"1",
             appName:"Danny_Beta"
         ]
+        buildConfigField "String", "url", "\"https://github.com/dannycx\""
     }
     // release
     release {
@@ -20,6 +23,7 @@ productFlavors {
             verNum:"1",
             appName:"Danny_Release"
         ]
+        buildConfigField "String", "url", "\"https://github.com/dannycx/release\""
     }
 }
 ```
