@@ -25,23 +25,33 @@ object XDateUtils {
         startCalendar.firstDayOfWeek = Calendar.MONDAY
         endCalendar.firstDayOfWeek = Calendar.MONDAY
 
-        val startYear = startCalendar[Calendar.YEAR]
+        var startYear = startCalendar[Calendar.YEAR]
         val startWeek = startCalendar[Calendar.WEEK_OF_YEAR]
-        val endYear = endCalendar[Calendar.YEAR]
+        var endYear = endCalendar[Calendar.YEAR]
         val endWeek = endCalendar[Calendar.WEEK_OF_YEAR]
 
+        if (startWeek == 1 && startCalendar[Calendar.MONTH] == Calendar.DECEMBER) {
+            ++startYear
+        }
+
+        if (endWeek == 1 && endCalendar[Calendar.MONTH] == Calendar.DECEMBER) {
+            ++endYear
+        }
+
         val minYear = startYear.coerceAtMost(endYear)
+
         val startWeekCount = startWeek + getYearBetweenWeekCount(minYear, startYear)
         val endWeekCount = endWeek + getYearBetweenWeekCount(minYear, startYear)
         return endWeekCount - startWeekCount
     }
 
     private fun getYearBetweenWeekCount(startYear: Int, endYear: Int): Int {
-        // 一年最后一天，跨年
         var weekCount = 0
         if (startYear >= endYear) {
             return weekCount
         }
+
+        // 一年最后一天，跨年31-6
         val endDateDay = 25
         for (i in 0 until endYear - startYear) {
             val calendar = Calendar.getInstance()
