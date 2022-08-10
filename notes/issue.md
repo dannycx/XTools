@@ -1,5 +1,11 @@
 # 知识积累
 
+### 单复数数字单位换行
+* 使用\u00A0拼接，例%d\u00A0day
+
+### Launcher Activity注意事项
+* 启动的activity，intent-filter不可设置Default属性，否则会导致安装后activity被启动问题
+
 ### 图片深色模式适配
 ###### 填充模式
 * 内部填充src_in、src_atop
