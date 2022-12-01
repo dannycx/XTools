@@ -3,6 +3,9 @@
 ### 单复数数字单位换行
 * 使用\u00A0拼接，例%d\u00A0day
 
+### 镜像化语言位置翻转（乌尔都）
+* 使用\u202A拼接，例\u202A %d-%sday\u202A
+
 ### Launcher Activity注意事项
 * 启动的activity，intent-filter不可设置Default属性，否则会导致安装后activity被启动问题
 
