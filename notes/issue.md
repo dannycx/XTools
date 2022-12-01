@@ -26,3 +26,6 @@
 * AndroidManifest 冲突（tools:replace="android:name"）
 * 包冲突（exclude排除，使用统一依赖版本）
 * 资源名冲突（模块前缀命名）
+
+### 启动应用
+* adb shell am start -n "tw.com.newline.whiteboard/tw.com.newline.whiteboard.android.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
