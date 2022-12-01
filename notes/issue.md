@@ -28,4 +28,4 @@
 * 资源名冲突（模块前缀命名）
 
 ### 启动应用
-* adb shell am start -n "tw.com.newline.whiteboard/tw.com.newline.whiteboard.android.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
+* adb shell am start -n "com.danny.x/com.danny.x.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
