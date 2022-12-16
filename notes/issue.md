@@ -1,5 +1,8 @@
 # 知识积累
 
+### git下载代码报错：SSL certificate problem: self signed certificate
+* windows：git config --global http.sslVerify false
+
 ### 单复数数字单位换行
 * 使用\u00A0拼接，例%d\u00A0day
 
