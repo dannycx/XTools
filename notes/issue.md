@@ -1,5 +1,8 @@
 # 知识积累
 
+### CallOnClick
+* 主动调用view.onClick()
+
 ### git下载代码报错：SSL certificate problem: self signed certificate
 * windows：git config --global http.sslVerify false
 
