@@ -2,6 +2,13 @@
 
 ## gradle指令
 
+### 6.0以下版本依赖管理
+* kotlin+buildSrc
+
+
+### 6.0以上版本依赖管理
+* Composing Builds
+
 ### 查看依赖树
 * gradlew module_name : dependencies
 
