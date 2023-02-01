@@ -4,7 +4,27 @@
 
 ### 6.0以下版本依赖管理
 * kotlin+buildSrc
+1. 项目根目录下新建文件夹buildSrc
+2. 在 buildSrc 文件夹里创建名为 build.gradle.kts 的文件，并添加以下内容
+```
+plugins {
+    'kotlin-dsl'
+}
+repositories{
+    jcenter()
+}
+```
+3. 在 buildSrc/src/main/java/包名/ 目录下新建 Version.kt 文件，添加以下内容
+```
+object Versions {
+    val appcompat = "1.1.0"
+}
 
+object Deps {
+    val appcompat =  "androidx.appcompat:appcompat:${Versions.appcompat}"
+}
+```
+4. 重启AS，多出buildSrc module，引用其中版本信息，统一管理
 
 ### 6.0以上版本依赖管理
 * Composing Builds
