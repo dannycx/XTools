@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
+//apply plugin: 'com.google.protobuf'
+apply from: '../thirdConfig.gradle'
+
 def resDirs = [
         ''
 ]
@@ -42,6 +45,10 @@ android {
             resDirs.forEach {
                 res.srcDirs += 'src/main/java/com/danny/xtools/' + it + '/res'
             }
+
+//            proto {
+//                srcDir 'src/main/proto' // 指定proto文件路径
+//            }
         }
     }
 
@@ -49,6 +56,29 @@ android {
         enabled = true
     }
 }
+
+//protobuf {
+//    protoc {
+//        artifact = 'com.google.protobuf:protoc:3.9.0'
+//    }
+//
+//    generateProtoTasks {
+//        all().each { task ->
+//            task.builtins {
+//                remove java
+//            }
+//            task.builtins {
+//                java {
+//                    outputSubDir ''
+//                } // 生成java源码
+//            }
+//        }
+//    }
+//
+//    generatedFilesBaseDir {
+//        "$projectDir/src/mian"
+//    }
+//}
 
 dependencies {
 

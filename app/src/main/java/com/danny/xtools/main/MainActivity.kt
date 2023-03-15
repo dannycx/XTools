@@ -64,5 +64,4 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         XSystemUtil.getInstance().doubleExit(this)
     }
-
 }

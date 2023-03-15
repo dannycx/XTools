@@ -1,0 +1,14 @@
+syntax = "proto3"
+
+package = "com.danny.proto" // 生成java文件包名
+option java_outer_classname = "XRequest" // 生成java文件类名
+
+message Request {
+    int32 msgType = 1;
+    float msgVersion = 2;
+    bytes msgBody = 3;
+
+    message RequestBody {
+        int32 day = 1;
+    }
+}

@@ -1,0 +1,35 @@
+project.ext {
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.1"
+    minSdkVersion = 26
+    targetSdkVersion = 30
+    applicationId = "com.danny"
+
+
+    setAppDefaultConfig = {
+        extension ->
+            extension.apply plugin: 'com.danny'
+            extension.description "app"
+            setAndroidConfig extension.android
+            setDependencies extension.dependencies
+    }
+
+
+    setAndroidConfig = {
+        extension ->
+            extension.compileSdkVersion compileSdkVersion
+            extension.buildToolsVersion buildToolsVersion
+            extension.defaultConfig {
+                minSdkVersion minSdkVersion
+                targetSdkVersion targetSdkVersion
+
+                testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+                javaCompileOptions {
+                    annotationProcessorOptions {
+                        arguments = [ moduleName : extension.project.getName() ]
+                    }
+                }
+            }
+            extension.compileSdkVersion compileSdkVersion
+    }
+}

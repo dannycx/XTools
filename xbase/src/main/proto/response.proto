@@ -1,0 +1,21 @@
+syntax = "proto3"
+
+package = "com.danny.proto"
+option java_outer_classname = "XResponse"
+
+message Response {
+    int32 msgType = 1;
+    float msgVersion = 2;
+    bytes msgBody = 3;
+
+    message ResponseBody {
+        int32 day = 1;
+        repeated Card cardList = 2;
+    }
+
+    message Card {
+        int32 id = 1;
+        string name = 2;
+        bool success = 3;
+    }
+}

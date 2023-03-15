@@ -1,0 +1,5 @@
+ext {
+    thirdLib = [
+            protobuf_java = 'com.google.protobuf:protobuf-java:13.1.0'
+    ]
+}

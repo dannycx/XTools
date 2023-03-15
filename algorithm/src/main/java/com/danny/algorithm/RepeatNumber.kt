@@ -1,21 +1,22 @@
 package com.danny.algorithm
 
 /**
- * 重复数字
  *
  * @author danny
  * @since 2022/4/11
  */
 
 fun main() {
-    println(repeatNumber(intArrayOf(0, 2, 4, 4, 7 , 6, 5, 3)))
-    println(repeatNumberTwo(intArrayOf(1, 2, 5, 4, 3 , 6, 5, 3)))
+//    println(repeatNumber(intArrayOf(0, 2, 4, 4, 7 , 6, 5, 3)))
+//    println(repeatNumberTwo(intArrayOf(1, 2, 5, 4, 3 , 6, 5, 3)))
+//    println(Math.pow(2.0, 3.0))
+
+    Test.x3()
 }
 
 /**
- * 长度为n数组，数字范围0 ~ n-1，求重复数字
  */
-fun repeatNumber(array : IntArray?) : Int {
+fun repeatNumber(array: IntArray?) : Int {
     when(val length = array?.size ?: 0) {
         0 -> return -1
         else -> {
@@ -46,7 +47,7 @@ fun repeatNumber(array : IntArray?) : Int {
 /**
  * 长度为n+1数组，数字范围1 ~ n，求重复数字
  */
-fun repeatNumberTwo(array : IntArray?) : Int {
+fun repeatNumberTwo(array: IntArray?) : Int {
     when(val length = array?.size ?: 0) {
         0 -> return -1
         else -> {
