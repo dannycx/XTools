@@ -1,13 +1,39 @@
 # 问题汇总
+***. vertor转bitmap
+    > 5.0以后vector无法使用BitmapFactory.decodeResource转换，原因：4.4及以下用的是png资源，vector会转png，以上无法转换
+```
+解决方法如下：
+fun vector2Bitmap(id: Int): Bitmap? {
+    when {
+        Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP -> {
+            val vectorDrawable = ContextCompat.getDrawable(MainApplication.get(), id) ?: return null
+            val bitmap = Bitmap.createBitmap(
+                vectorDrawable.intrinsicWidth,
+                vectorDrawable.intrinsicHeight,
+                Bitmap.Config.ARGB_8888
+            )
+            val canvas = Canvas(bitmap)
+            vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
+            vectorDrawable.draw(canvas)
+            return bitmap
+        }
+        else -> {
+            return BitmapFactory.decodeResource(MainApplication.get().resources, id)
+        }
+    }
+}
+```
 
-**. 安装出现null情况
+***. 安装出现null情况
     > 卸载原app重新安装
-**. 禁用多窗口模式
+
+***. 禁用多窗口模式
     > 24.+ 清单文件application配置resizeableActivity="false"  
     
     > 24- 禁用横竖屏  
     
     > 多窗口最终停留在onPause()
+
 **. EditView
     > 隐藏键盘showSoftInputOnFocus=false
     
