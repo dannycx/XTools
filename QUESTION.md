@@ -1,14 +1,14 @@
 # 问题汇总
 
-1. 安装出现null情况
+**. 安装出现null情况
     > 卸载原app重新安装
-2. 禁用多窗口模式
+**. 禁用多窗口模式
     > 24.+ 清单文件application配置resizeableActivity="false"  
     
     > 24- 禁用横竖屏  
     
     > 多窗口最终停留在onPause()
-3. EditView
+**. EditView
     > 隐藏键盘showSoftInputOnFocus=false
     
     > 不允许复制longClickable="false"  imeOptions="flagNoExtractUi"
@@ -23,7 +23,7 @@
     
     > 焦点丢失->设置setNextFocusId
 
-4.Error:java.lang.RuntimeException: Some file crunching failed, see logs for detail
+**.Error:java.lang.RuntimeException: Some file crunching failed, see logs for detail
 > 出现这个错误的原因是有哪种情况？
 1. 构建Gradle的时候，Gradle会去检查一下是否修改过文件的后缀名；
 2. 一般大多数是出现在图片上，.jpg修改成了.png就会出现这个问题；
