@@ -1,5 +1,15 @@
 # 知识积累
 
+### startActivity 找不到对应activity
+* Android13目标activity设置data属性，跳转增加Intent.setData(Uri.parse("scheme://host:port/pathPattern"))设置
+```
+val intent = Intent()
+intent.setClass(pkgName, activityClass)
+intent.setData(Uri.parse("scheme://host:port/pathPattern"))
+// intent.setDataAndType(Uri, mimeType)
+startActivity(intent)
+```
+
 ### CallOnClick
 * 主动调用view.onClick()
 
