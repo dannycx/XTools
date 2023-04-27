@@ -1,5 +1,10 @@
 # ADB命令
 
+> app线程优先级查看
++ adb shell 
++ ps -A | grep 包名 // 根据包名找到Pid
++ top -H -p PID    // 查看线程优先级命令
+
 > adb断开连接设备
 + adb kill-server
 
