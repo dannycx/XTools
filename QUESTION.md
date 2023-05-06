@@ -1,4 +1,12 @@
 # 问题汇总
+
+#### 提示EventBus未注册
+```
+@Subscribe fun event(status: Boolean) {
+  // 布尔值无法传递，改为字符串或对象
+}
+```
+
 #### vertor转bitmap
    > 5.0以后vector无法使用BitmapFactory.decodeResource转换，原因：4.4及以下用的是png资源，vector会转png，以上无法转换
 ```
