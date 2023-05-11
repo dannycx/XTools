@@ -1,5 +1,24 @@
 # 知识积累
 
+### 运行报错：java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/impl/client/DefaultHttpClient
+* AndroidManifest.xml修改如下
+> 注意：Android 10+ 需 android:requestLegacyExternalStorage="true" 才能访问存储 R/W
+> Android 6.0 在 AndroidManifest.xml 的 application 元素下引入了 useCleartextTraffic。 Android P 中的默认值为“false”。 将此设置为 true 表示该应用打算使用清晰的网络流量
+> 如您的应用在 Android 10 设备上运行时选择退出分区存储，建议在AndroidManifest.xml中将 requestLegacyExternalStorage 设置为 true。 这样，应用在 Android10 设备上正常运行
+```
+<application
+        ...
+        ...
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+
+       <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+</application>
+```
+
 ### startActivity 找不到对应activity
 * Android13目标activity设置data属性，跳转增加Intent.setData(Uri.parse("scheme://host:port/pathPattern"))设置
 ```
