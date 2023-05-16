@@ -1,5 +1,8 @@
 # ADB命令
 
+> logcat日志：logcat *:e
++ logcat | grep "关键字"
+
 > app线程优先级查看
 + adb shell 
 + ps -A | grep 包名 // 根据包名找到Pid
@@ -31,6 +34,7 @@
 
 > 复制文件
 + cp -r /sdcard/MyScript /data/ocr/
++ 从设备复制到电脑当前文件夹：adb pull /system/test.txt .
 
 > 修改文件访问权限
 + chmod 666 ocr
