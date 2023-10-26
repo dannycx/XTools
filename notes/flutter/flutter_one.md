@@ -46,7 +46,8 @@ Doctor summary (to see all details, run flutter doctor -v):
 - 下载SDK Tools. AS -> Settings ->Android SDK -> SDK Tools -> Android SDK Command-line Tools
 ### X Android license status unknown
 - 执行 flutter doctor --android-licenses
-### Visual Studio - develop Windows apps（不开发Windows phone app可忽略）
+### Visual Studio - develop Windows apps
+* 不开发Windows phone app可忽略
 
 ## 4. Android studio下载插件，版本要对应，否则会不兼容，不允许安装
 - as内安装
