@@ -58,8 +58,21 @@ Doctor summary (to see all details, run flutter doctor -v):
 ## 编译问题
 - 配置代理
 - Pub get失败，删除flutter\bin\cache\lockfile文件
-
-
+ ## 命令创建flutter应用
+ ### flutter create --project-name hello_world --org com.hello --platforms=android,ios --android-language java --ios-language objc hello_flutter
+ * --project-name：应用名
+ * --org：包名
+ * --platforms：支持平台
+ * --android-language：android语言，java，kotlin（默认）
+ * --ios-language：ios语言，objc，swift（默认）
+### 新增支持平台
+* flutter config --enable-macos-desktop
+* flutter config --enable-linux-desktop
+* flutter config --enable-windows-desktop
+### 查看可支持设备
+* flutter devices
+### 命令运行flutter项目
+* flutter run -d 设备名称
 
 # Other
 ## 运行flutter/flutter_console.bat
